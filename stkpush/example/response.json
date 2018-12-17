@@ -1,0 +1,15 @@
+{
+            "TransactionType": "Pay Bill",
+            "TransID": "ML77D92IR3",
+            "TransTime": "20181207092858",
+            "TransAmount": "800.00",
+            "BusinessShortCode": "715423",
+            "BillRefNumber": "mba00120",
+            "InvoiceNumber": "",
+            "OrgAccountBalance": "21527.00",
+            "ThirdPartyTransID": "",
+            "MSISDN": "254727434359",
+            "FirstName": "JOHNSTONE",
+            "MiddleName": "MAZEMBE",
+            "LastName": ""
+        }
