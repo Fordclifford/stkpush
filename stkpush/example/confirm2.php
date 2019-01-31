@@ -1,7 +1,7 @@
 <?php
 require 'SaveInDB.php';
-$file = fopen('test2.json', 'a');
-fwrite($file, processSTKPushRequestCallback());
+$file = fopen('callback.json', 'a');
+fwrite($file, file_get_contents('php://input'));
 
 function processSTKPushRequestCallback(){
   $callbackJSONData=file_get_contents('php://input');
@@ -30,6 +30,15 @@ function processSTKPushRequestCallback(){
         ];
         return json_encode($result);
     }
-    $payment = json_decode(processSTKPushRequestCallback());
-    
+    $array = json_decode(processSTKPushRequestCallback(),true);
     confirmPayment($array);
+  
+    $file = fopen('callback.json', 'a');
+fwrite($file, $resultDesc = $array["resultDesc"].
+    $resultCode = $array['resultCode'].
+    $merchantRequestID = $array['merchantRequestID'].
+    $checkoutRequestID = $array['checkoutRequestID'].
+    $mpesaReceiptNumber = $array['mpesaReceiptNumber'].
+    $transactionDate = $array['transactionDate'].
+    $phoneNumber = $array['phoneNumber']);
+    
